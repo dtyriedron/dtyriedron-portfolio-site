@@ -7,7 +7,7 @@ import { Col , Button, Row} from 'react-bootstrap';
 function PortfolioPage(props){
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
-    const [language, setLanguage] = useState({ data: [] });
+    const [language, setLanguage] = useState('');
 
     useEffect(() => {
         fetch('https://api.github.com/users/dtyriedron/repos')
@@ -42,12 +42,29 @@ function PortfolioPage(props){
     // }, []);
 
     const setLanguages = (
-        array,
+        object,
     ) => {
-        console.log(array)
-        setLanguage(array);
+        console.log(object)
+        var obj = object;
+        setLanguage(obj);
     };
 
+    
+
+    // const NamesList = () => (
+    //     <div>
+    //       <ul>{language.map((name, value) => <li key={name} value={value}> {name},{value} </li>)}</ul>
+    //     </div>
+    //   );
+
+    var totalBytes =0;
+    for(var x in language){
+        totalBytes+=parseInt(language[x])
+    }
+    console.log(totalBytes);
+    var percent=0;
+
+    var colors = ["success", "info", "warning", "danger"];
 
     return(
         <div>
@@ -69,13 +86,25 @@ function PortfolioPage(props){
                 <div style={{border: ".2rem solid #ececec", padding: "1rem"}}>
                     <p>
                         Code coverage:
-                        {console.log(language)}
                     </p>
-              
-                    <ProgressBar variant="success" now={40} />
-                    <ProgressBar variant="info" now={20} />
-                    <ProgressBar variant="warning" now={60} />
-                    <ProgressBar variant="danger" now={80} />
+                    <style type="text/css">
+                        {`
+                        .progress-bar {
+                        color: black;
+                        }
+                        `}
+                    </style>
+                    
+                    {
+                        
+                        Object.entries(language).map(([lan, bytes], i) => {
+                            console.log(bytes);
+                            percent = (parseInt(bytes)/totalBytes)*100;
+                                return (                                                            
+                                    <ProgressBar key={i} variant={colors[Math.floor(Math.random() * colors.length)]} label={lan +` ${percent.toFixed(2)}%`} now={percent}/>                                    
+                                )
+                        })
+                    }
                 </div>
 
             </Content>
