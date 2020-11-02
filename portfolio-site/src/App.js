@@ -8,7 +8,7 @@ import Footer from './components/Footer';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
-import Portfolio from './pages/PortfolioPage';
+import Portfolio from './pages/PortfolioMainPage';
 import Achievements from './pages/AchievementsPage';
 import Hobbies from './pages/HobbiesPage';
 
@@ -31,7 +31,7 @@ class App extends React.Component {
       about: {
         title: 'About me',
       },
-      portfolio: {
+      portfolioMainPage: {
         title: 'Here\'s some of my projects!',
       },
       achievements:{
@@ -73,7 +73,7 @@ class App extends React.Component {
 
           <Route path="/" exact render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
           <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
-          <Route path="/portfolio" render={()=> <Portfolio title={this.state.portfolio.title}/>}/>
+          <Route path="/portfolio" render={()=> <Portfolio title={this.state.portfolioMainPage.title}/>}/>
           <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
           <Route path="/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
           <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
