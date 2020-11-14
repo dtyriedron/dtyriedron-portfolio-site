@@ -59,11 +59,11 @@ class App extends React.Component {
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
                 <Link className="nav-link" to={process.env.PUBLIC_URL + '/'}>Home</Link>
-                <Link className="nav-link" >About</Link>
-                <Link className="nav-link" >Portfolio</Link>
-                <Link className="nav-link" >Achievements</Link>
-                <Link className="nav-link" >Hobbies</Link>
-                <Link className="nav-link" >Contact</Link>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + '/about'}>About</Link>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + '/PortfolioMainPage'}>Portfolio</Link>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + '/achievements'}>Achievements</Link>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + '/hobbies'}>Hobbies</Link>
+                <Link className="nav-link" to={process.env.PUBLIC_URL + '/contact'}>Contact</Link>
 
               </Nav>
             </Navbar.Collapse>
