@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dtyriedron-portfolio-site/precache-manifest.df5a939c354f29b494c0c41867467c68.js"
+  "/dtyriedron-portfolio-site/precache-manifest.3d61cff73f582ff848dc6aaa7db56367.js"
 );
 
 self.addEventListener('message', (event) => {
