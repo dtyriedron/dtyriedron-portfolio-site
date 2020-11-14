@@ -71,13 +71,13 @@ class App extends React.Component {
 
           </Navbar>
 
-          <Route exact path="/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
-          <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
-          <Route path="/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
-          <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
-          <Route path="/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
-          <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
-          <Route path="/PortfolioPage" render={()=> <Portfolio />}/>
+          <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
+          <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title={this.state.about.title}/>}/>
+          <Route path={process.env.PUBLIC_URL + '/PortfolioMainPage'} render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
+          <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title={this.state.achievements.title}/>}/>
+          <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
+          <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
+          <Route path={process.env.PUBLIC_URL + '/PortfolioPage'} render={()=> <Portfolio />}/>
 
           <Footer />
 
