@@ -1,5 +1,5 @@
 import React from 'react';
-import {HashRouter, Route, Link} from 'react-router-dom';
+import {Router, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from 'react-bootstrap';
 import './App.css';
@@ -49,7 +49,7 @@ class App extends React.Component {
   }
   render(){
     return (
-      <HashRouter>
+      <Router>
         <Container className="p-0" fluid={true}>
 
           <Navbar className="border-bottom" bg="transparent" expand="lg">
@@ -82,7 +82,7 @@ class App extends React.Component {
           <Footer />
 
         </Container>
-      </HashRouter>
+      </Router>
     );
   }
   
