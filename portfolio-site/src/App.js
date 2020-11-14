@@ -25,8 +25,8 @@ class App extends React.Component {
         {title: 'Contact', path:'/contact'}
       ],
       home: {
-        title: 'Sesh.',
-        subTitle: 'Projects that make a difference',
+        title: 'Dylan Tyrie-Dron',
+        subTitle: 'Graduate Software Engineer',
       },
       about: {
         title: 'About me',
@@ -58,12 +58,12 @@ class App extends React.Component {
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/PortfolioMainPage">Portfolio</Link>
-                <Link className="nav-link" to="/achievements">Achievements</Link>
-                <Link className="nav-link" to="/hobbies">Hobbies</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" >Home</Link>
+                <Link className="nav-link" >About</Link>
+                <Link className="nav-link" >Portfolio</Link>
+                <Link className="nav-link" >Achievements</Link>
+                <Link className="nav-link" >Hobbies</Link>
+                <Link className="nav-link" >Contact</Link>
 
               </Nav>
             </Navbar.Collapse>
