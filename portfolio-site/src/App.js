@@ -58,12 +58,12 @@ class App extends React.Component {
             <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle">
               <Nav className="ml-auto">
-                <Link className="nav-link" to="/">Home</Link>
-                <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/PortfolioMainPage">Portfolio</Link>
-                <Link className="nav-link" to="/achievements">Achievements</Link>
-                <Link className="nav-link" to="/hobbies">Hobbies</Link>
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/">Home</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/about">About</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/PortfolioMainPage">Portfolio</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/achievements">Achievements</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/hobbies">Hobbies</Link>
+                <Link className="nav-link" to="https://dtyriedron.github.io/dtyriedron-portfolio-site/contact">Contact</Link>
 
               </Nav>
             </Navbar.Collapse>
@@ -71,13 +71,13 @@ class App extends React.Component {
 
           </Navbar>
 
-          <Route path="/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
-          <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
-          <Route path="/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
-          <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
-          <Route path="/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
-          <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
-          <Route path="/PortfolioPage" render={()=> <Portfolio />}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/about" render={()=> <About title={this.state.about.title}/>}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
+          <Route exact path="https://dtyriedron.github.io/dtyriedron-portfolio-site/PortfolioPage" render={()=> <Portfolio />}/>
 
           <Footer />
 
