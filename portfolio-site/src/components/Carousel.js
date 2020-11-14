@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row} from 'react-bootstrap';
 
 import Card from '../components/Card';
 
@@ -65,8 +65,8 @@ class Carousel extends React.Component{
 
     render(){
         return(
-            <Container fluid={true}>
-                <Row className="justify-content-around">
+            <Container fluid={true} >
+                <Row className="justify-content-center">
                     {this.makeitems(this.state.items)}
                 </Row>
             </Container>

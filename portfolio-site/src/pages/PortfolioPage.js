@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
 import Project from '../components/Project';
 
-function PortfolioPage(props){
+function PortfolioPage(){
+    var url = new URL(window.location.href);
+	var param = url.searchParams.get("pos");
     return(
-        <Project pos={3}/>
+        <Project pos={param}/>
     );
 }
 export default PortfolioPage;

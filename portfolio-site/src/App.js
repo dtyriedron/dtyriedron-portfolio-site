@@ -8,7 +8,8 @@ import Footer from './components/Footer';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
 import Contact from './pages/ContactPage';
-import Portfolio from './pages/PortfolioMainPage';
+import PortfolioMain from './pages/PortfolioMainPage';
+import Portfolio from './pages/PortfolioPage';
 import Achievements from './pages/AchievementsPage';
 import Hobbies from './pages/HobbiesPage';
 
@@ -26,19 +27,18 @@ class App extends React.Component {
       home: {
         title: 'Sesh.',
         subTitle: 'Projects that make a difference',
-        text: 'See below for projects',
       },
       about: {
         title: 'About me',
       },
       portfolioMainPage: {
-        title: 'Here\'s some of my projects!',
+        title: 'My projects!',
       },
       achievements:{
-        title: 'Here\'s some of my achievements!',
+        title: 'My achievements!',
       },
       hobbies:{
-        title: 'Here\'s some of my interests!',
+        title: 'My interests!',
       },
       contact: {
         title: 'Get in touch with me',
@@ -60,7 +60,7 @@ class App extends React.Component {
               <Nav className="ml-auto">
                 <Link className="nav-link" to="/">Home</Link>
                 <Link className="nav-link" to="/about">About</Link>
-                <Link className="nav-link" to="/portfolio">Portfolio</Link>
+                <Link className="nav-link" to="/PortfolioMainPage">Portfolio</Link>
                 <Link className="nav-link" to="/achievements">Achievements</Link>
                 <Link className="nav-link" to="/hobbies">Hobbies</Link>
                 <Link className="nav-link" to="/contact">Contact</Link>
@@ -73,10 +73,11 @@ class App extends React.Component {
 
           <Route path="/" exact render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
           <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
-          <Route path="/portfolio" render={()=> <Portfolio title={this.state.portfolioMainPage.title}/>}/>
+          <Route path="/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
           <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
           <Route path="/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
           <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
+          <Route path="/PortfolioPage" render={()=> <Portfolio />}/>
 
           <Footer />
 
