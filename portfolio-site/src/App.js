@@ -71,13 +71,13 @@ class App extends React.Component {
 
           </Navbar>
 
-          <Route path="/dtyriedron-portfolio-site/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
-          <Route path="/dtyriedron-portfolio-site/about" render={()=> <About title={this.state.about.title}/>}/>
-          <Route path="/dtyriedron-portfolio-site/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
-          <Route path="/dtyriedron-portfolio-site/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
-          <Route path="/dtyriedron-portfolio-site/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
-          <Route path="/dtyriedron-portfolio-site/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
-          <Route path="/dtyriedron-portfolio-site/PortfolioPage" render={()=> <Portfolio />}/>
+          <Route path="/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
+          <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
+          <Route path="/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
+          <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
+          <Route path="/hobbies" render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
+          <Route path="/contact" render={()=> <Contact title={this.state.contact.title}/>}/>
+          <Route path="/PortfolioPage" render={()=> <Portfolio />}/>
 
           <Footer />
 
