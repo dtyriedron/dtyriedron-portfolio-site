@@ -1,4 +1,5 @@
 import Project from '../components/Project';
+import React from 'react';
 
 function PortfolioPage(){
     var url = new URL(window.location.href);
