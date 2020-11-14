@@ -1,5 +1,5 @@
 import React from 'react';
-import {Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from 'react-bootstrap';
 import './App.css';
@@ -49,7 +49,7 @@ class App extends React.Component {
   }
   render(){
     return (
-      <Router >
+      <BrowserRouter >
         <Container className="p-0" fluid={true}>
 
           <Navbar className="border-bottom" bg="transparent" expand="lg">
@@ -71,7 +71,7 @@ class App extends React.Component {
 
           </Navbar>
 
-          <Route path="/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
+          <Route exact path="/" render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
           <Route path="/about" render={()=> <About title={this.state.about.title}/>}/>
           <Route path="/PortfolioMainPage" render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
           <Route path="/achievements" render={()=> <Achievements title={this.state.achievements.title}/>}/>
@@ -82,7 +82,7 @@ class App extends React.Component {
           <Footer />
 
         </Container>
-      </Router>
+      </BrowserRouter>
     );
   }
   
