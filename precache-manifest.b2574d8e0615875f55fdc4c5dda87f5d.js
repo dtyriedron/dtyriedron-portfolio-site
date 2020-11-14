@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e8699ba97baa8cac616ba5187a7ca114",
+    "revision": "1ccab5f1fc73d8883b990afcf534545b",
     "url": "/dtyriedron-portfolio-site/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dtyriedron-portfolio-site/static/css/2.8aa5a7f8.chunk.css"
   },
   {
-    "revision": "808b85d34f0056b7dde5",
+    "revision": "2065c663edf1c011a1cf",
     "url": "/dtyriedron-portfolio-site/static/css/main.b1726a8f.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dtyriedron-portfolio-site/static/js/2.37b58ffe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "808b85d34f0056b7dde5",
-    "url": "/dtyriedron-portfolio-site/static/js/main.5bd3954f.chunk.js"
+    "revision": "2065c663edf1c011a1cf",
+    "url": "/dtyriedron-portfolio-site/static/js/main.6167411a.chunk.js"
   },
   {
     "revision": "6971f4db99f6aac3774e",
