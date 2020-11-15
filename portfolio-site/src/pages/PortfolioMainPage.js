@@ -2,9 +2,12 @@ import React, { useState, useEffect} from 'react';
 import Hero from '../components/Hero';
 import { Row, Card, Button, Container} from 'react-bootstrap';
 
+import Android from '../assests/images/android.svg';
+
 function PortfolioMainPage(props){
     const [name, setName] = useState('');
     const [repos, setRepos] = useState('');
+    const [language, setLanguage] = useState('');
 
     useEffect(() => {
         fetch('https://api.github.com/users/dtyriedron/repos')
@@ -12,8 +15,6 @@ function PortfolioMainPage(props){
         .then( data => {
             setCardData(data);     
         });
-        
-
     }, []);
 
     const setCardData = (
@@ -23,16 +24,28 @@ function PortfolioMainPage(props){
         var arr = array;
         console.log(arr);
         setRepos(arr);
+        for (const [index, value] of array.entries()) {
+            fetch(`https://api.github.com/repos/dtyriedron/${array[index].name}/languages`)
+            .then(res => res.json())
+            .then(languages => {
+                setLanguages(languages);     
+            });
+        }
+    };
+
+    const setLanguages = (
+        object,
+    ) => {
+        console.log(object)
+        var obj = object;
+        setLanguage(obj);
     };
 
     function handleClick(pos) {     
-      // alert(pos);   
-      console.log(pos);
-      document.location = `/PortfolioPage/?pos=${pos}`;
+      const home = process.env.PUBLIC_URL + '';
+      document.location = `${home}/PortfolioPage/?pos=${pos}`;
     }
-
     
-
     return(
         <div>
           <Hero title={props.title}/>
@@ -44,19 +57,24 @@ function PortfolioMainPage(props){
                                     return (         
                                         // <Col> 
                                         <Card border="primary" key={i} style={{width: '15rem', margin: '1rem'}}>
-                                            <Card.Header key={i}>{repo.name}
+                                            <Card.Header key={i} style={{width: '100%'}}>{repo.name}                                            
                                             </Card.Header>
-                                            <Card.Body key={i}>                                            
+                                            <Card.Body key={i}>
+                                                {
+                                                    // Object.entries(language).map((lan, i) =>{
+                                                    //     // console.log(language[lan])
+                                                    //     return(
+                                                    //         <Card.Img key={i} style={{width:'25%'}} variant="top" src={Android}/>
+                                                    //     );
+                                                    // })
+                                                }                                            
                                                 <Card.Text key={i}>
                                                     {repo.description}
                                                 </Card.Text>                                            
                                             </Card.Body>
                                             <Card.Footer>
-                                                <Button key={i} style={{marginLeft:'20%', width:'75'}} onClick={()=> handleClick(pos)} variant="primary">Project Page
+                                                <Button key={i} style={{width:'70%', marginRight:'5%'}} onClick={()=> handleClick(pos)} variant="primary">Project Page
                                                 </Button>
-                                                {/* <Route exact path="/PortfolioPage">
-                                                  {<Project pos={3}/>}
-                                                </Route> */}
                                             </Card.Footer>
                                         </Card>
                                         // </Col>

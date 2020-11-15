@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from 'react-bootstrap';
@@ -12,7 +12,6 @@ import PortfolioMain from './pages/PortfolioMainPage';
 import Portfolio from './pages/PortfolioPage';
 import Achievements from './pages/AchievementsPage';
 import Hobbies from './pages/HobbiesPage';
-
 
 class App extends React.Component {
   constructor(props){
@@ -47,42 +46,47 @@ class App extends React.Component {
       
     }
   }
+  
   render(){
     return (
-      <BrowserRouter >
-        <Container className="p-0" fluid={true}>
+              <BrowserRouter >
+                <Container className="p-0" fluid={true}>
 
-          <Navbar className="border-bottom" bg="transparent" expand="lg">
-            <Navbar.Brand>Dylan Tyrie-Dron</Navbar.Brand>
+                  <Navbar className="border-bottom" bg="transparent" expand="lg">
+                    <Navbar.Brand>Dylan Tyrie-Dron</Navbar.Brand>
 
-            <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
-            <Navbar.Collapse id="navbar-toggle">
-              <Nav className="ml-auto">
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/'}>Home</Link>
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/about'}>About</Link>
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/PortfolioMainPage'}>Portfolio</Link>
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/achievements'}>Achievements</Link>
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/hobbies'}>Hobbies</Link>
-                <Link className="nav-link" to={process.env.PUBLIC_URL + '/contact'}>Contact</Link>
+                    <Navbar.Toggle className="border-0" aria-controls="navbar-toggle" />
+                    <Navbar.Collapse id="navbar-toggle">
+                      <Nav className="ml-auto">
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/'}>Home</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/about'}>About</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/PortfolioMainPage'}>Portfolio</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/achievements'}>Achievements</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/hobbies'}>Hobbies</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/contact'}>Contact</Link>
 
-              </Nav>
-            </Navbar.Collapse>
+                      </Nav>
+                    </Navbar.Collapse>
+                    
+
+                  </Navbar>
+
+                  <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
+                  <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title={this.state.about.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/PortfolioMainPage'} render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title={this.state.achievements.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/PortfolioPage'} render={()=> <Portfolio />}/>
+
+                  <Footer />
+
+                </Container>
+              </BrowserRouter>
             
 
-          </Navbar>
-
-          <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
-          <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title={this.state.about.title}/>}/>
-          <Route path={process.env.PUBLIC_URL + '/PortfolioMainPage'} render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
-          <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title={this.state.achievements.title}/>}/>
-          <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
-          <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
-          <Route path={process.env.PUBLIC_URL + '/PortfolioPage'} render={()=> <Portfolio />}/>
-
-          <Footer />
-
-        </Container>
-      </BrowserRouter>
+          
+        
     );
   }
   
