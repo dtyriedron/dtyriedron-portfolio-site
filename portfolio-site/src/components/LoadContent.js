@@ -15,6 +15,7 @@ class LoadContent extends React.Component{
             .then(res => res.json())
             .then((data) => this.setState({ data, loading: false }))
             .catch((err) => this.setState({ loading: false, error: true }))
+            
           }
     //     fetch(this.props.urls)
     //   .then(res => res.json())
