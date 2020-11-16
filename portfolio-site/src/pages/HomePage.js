@@ -4,7 +4,7 @@ import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
 import {Container, Row, Spinner} from 'react-bootstrap';
 import LoadContent from '../components/LoadContent.js';
-import Config from '../config.js';
+// import Config from '../config.js';
 
 function HomePage(props){
     return(

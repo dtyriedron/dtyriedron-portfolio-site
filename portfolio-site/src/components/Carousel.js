@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row} from 'react-bootstrap';
 
 import Card from '../components/Card';
-// import Photo from '../components/Photo';
 
 
 import github from '../assests/images/DylanGH.png';
-import instagram from '../assests/images/DylanInsta.png';
 import strava from '../assests/images/DylanStrava.png';
 
 

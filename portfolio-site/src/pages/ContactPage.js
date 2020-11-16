@@ -4,7 +4,6 @@ import Button from 'react-bootstrap/Button';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
-import Axios from 'axios';
 
 
 class ContactPage extends React.Component{
@@ -36,29 +35,33 @@ class ContactPage extends React.Component{
         e.preventDefault();
 
         this.setState({
-            disabled: true
+            // disabled: true
+            
+                            disabled: false,
+                            emailSent: false
+                
         });
 
-        Axios.post('http://localhost:3030/api/email', this.state)
-            .then(res => {
-                if(res.data.success){
-                    this.setState({
-                        disabled: false,
-                        emailSent: true
-                    }); 
-                } else{
-                    this.setState({
-                        disabled: false,
-                        emailSent: false
-                    }); 
-                }
-            })
-            .catch(err => {
-                this.setState({
-                    disabled: false,
-                    emailSent: false
-                })
-            });
+        // Axios.post('http://localhost:3030/api/email', this.state)
+        //     .then(res => {
+        //         if(res.data.success){
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: true
+        //             }); 
+        //         } else{
+        //             this.setState({
+        //                 disabled: false,
+        //                 emailSent: false
+        //             }); 
+        //         }
+        //     })
+        //     .catch(err => {
+        //         this.setState({
+        //             disabled: false,
+        //             emailSent: false
+        //         })
+        //     });
     }
 
     render(){
