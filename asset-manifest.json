@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/dtyriedron-portfolio-site/static/css/main.b1726a8f.chunk.css",
-    "main.js": "/dtyriedron-portfolio-site/static/js/main.ca338da2.chunk.js",
-    "main.js.map": "/dtyriedron-portfolio-site/static/js/main.ca338da2.chunk.js.map",
-    "runtime-main.js": "/dtyriedron-portfolio-site/static/js/runtime-main.2206b584.js",
-    "runtime-main.js.map": "/dtyriedron-portfolio-site/static/js/runtime-main.2206b584.js.map",
-    "static/css/2.8aa5a7f8.chunk.css": "/dtyriedron-portfolio-site/static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.910f983c.chunk.js": "/dtyriedron-portfolio-site/static/js/2.910f983c.chunk.js",
-    "static/js/2.910f983c.chunk.js.map": "/dtyriedron-portfolio-site/static/js/2.910f983c.chunk.js.map",
-    "index.html": "/dtyriedron-portfolio-site/index.html",
-    "precache-manifest.c2ba0d3a50f5a93c31381ffd863f6ddd.js": "/dtyriedron-portfolio-site/precache-manifest.c2ba0d3a50f5a93c31381ffd863f6ddd.js",
-    "service-worker.js": "/dtyriedron-portfolio-site/service-worker.js",
-    "static/css/2.8aa5a7f8.chunk.css.map": "/dtyriedron-portfolio-site/static/css/2.8aa5a7f8.chunk.css.map",
-    "static/css/main.b1726a8f.chunk.css.map": "/dtyriedron-portfolio-site/static/css/main.b1726a8f.chunk.css.map",
-    "static/js/2.910f983c.chunk.js.LICENSE.txt": "/dtyriedron-portfolio-site/static/js/2.910f983c.chunk.js.LICENSE.txt",
-    "static/media/DylanGH.png": "/dtyriedron-portfolio-site/static/media/DylanGH.8f6ed301.png",
-    "static/media/DylanInsta.png": "/dtyriedron-portfolio-site/static/media/DylanInsta.b61c8841.png",
-    "static/media/DylanStrava.png": "/dtyriedron-portfolio-site/static/media/DylanStrava.0ec24b30.png",
-    "static/media/android.svg": "/dtyriedron-portfolio-site/static/media/android.54170236.svg"
+    "main.css": "/portfolio-site/static/css/main.b1726a8f.chunk.css",
+    "main.js": "/portfolio-site/static/js/main.c0b3e1a6.chunk.js",
+    "main.js.map": "/portfolio-site/static/js/main.c0b3e1a6.chunk.js.map",
+    "runtime-main.js": "/portfolio-site/static/js/runtime-main.2d95e7a6.js",
+    "runtime-main.js.map": "/portfolio-site/static/js/runtime-main.2d95e7a6.js.map",
+    "static/css/2.8aa5a7f8.chunk.css": "/portfolio-site/static/css/2.8aa5a7f8.chunk.css",
+    "static/js/2.e5fb6fb7.chunk.js": "/portfolio-site/static/js/2.e5fb6fb7.chunk.js",
+    "static/js/2.e5fb6fb7.chunk.js.map": "/portfolio-site/static/js/2.e5fb6fb7.chunk.js.map",
+    "index.html": "/portfolio-site/index.html",
+    "precache-manifest.5183e5e645061527aa43571508a4fa92.js": "/portfolio-site/precache-manifest.5183e5e645061527aa43571508a4fa92.js",
+    "service-worker.js": "/portfolio-site/service-worker.js",
+    "static/css/2.8aa5a7f8.chunk.css.map": "/portfolio-site/static/css/2.8aa5a7f8.chunk.css.map",
+    "static/css/main.b1726a8f.chunk.css.map": "/portfolio-site/static/css/main.b1726a8f.chunk.css.map",
+    "static/js/2.e5fb6fb7.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.e5fb6fb7.chunk.js.LICENSE.txt",
+    "static/media/DylanGH.png": "/portfolio-site/static/media/DylanGH.8f6ed301.png",
+    "static/media/DylanStrava.png": "/portfolio-site/static/media/DylanStrava.0ec24b30.png",
+    "static/media/android.svg": "/portfolio-site/static/media/android.54170236.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2206b584.js",
+    "static/js/runtime-main.2d95e7a6.js",
     "static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.910f983c.chunk.js",
+    "static/js/2.e5fb6fb7.chunk.js",
     "static/css/main.b1726a8f.chunk.css",
-    "static/js/main.ca338da2.chunk.js"
+    "static/js/main.c0b3e1a6.chunk.js"
   ]
 }
