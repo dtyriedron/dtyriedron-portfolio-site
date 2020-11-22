@@ -37,8 +37,8 @@ class ContactPage extends React.Component{
         this.setState({
             // disabled: true
             
-                            disabled: false,
-                            emailSent: false
+            disabled: false,
+            emailSent: false
                 
         });
 

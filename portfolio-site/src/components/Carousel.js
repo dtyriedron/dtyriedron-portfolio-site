@@ -6,7 +6,7 @@ import Card from '../components/Card';
 
 import github from '../assests/images/DylanGH.png';
 import strava from '../assests/images/DylanStrava.png';
-
+import linkedIn from '../assests/images/linkedIn.jpeg';
 
 class Carousel extends React.Component{
     constructor(props){
@@ -43,7 +43,7 @@ class Carousel extends React.Component{
                     id:3,
                     title: 'LinkedIn',
                     subTitle: 'Connect your work and business',
-                    imgSrc: "https://media-exp1.licdn.com/dms/image/C5635AQHQ7bWKXod7lA/profile-framedphoto-shrink_400_400/0?e=1605553200&v=beta&t=WD1j6UH8s9Ca8vUkDCiTBLPbQcMD3ovbhJa3eJ8n6JE",
+                    imgSrc: linkedIn,
                     link: 'https://www.linkedin.com/in/dylan-tyrie-dron-041321184/',
                     selected: false
                 }

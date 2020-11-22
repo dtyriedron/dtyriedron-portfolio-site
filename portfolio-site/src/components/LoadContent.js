@@ -10,13 +10,14 @@ class LoadContent extends React.Component{
 
     componentDidMount(){
         for (const [index, value] of this.props.urls.entries()) {
-            // items.push(<Element key={index} />)
             fetch(value)
             .then(res => res.json())
             .then((data) => this.setState({ data, loading: false }))
-            .catch((err) => this.setState({ loading: false, error: true }))
-            
-          }
+            .catch((err) => {
+               this.setState({ data: value, loading: false})    
+            }
+            )
+        }
     //     fetch(this.props.urls)
     //   .then(res => res.json())
     //   .then((data) => this.setState({ data, loading: false }))

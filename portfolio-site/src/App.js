@@ -13,6 +13,7 @@ import Portfolio from './pages/PortfolioPage';
 import Achievements from './pages/AchievementsPage';
 import Hobbies from './pages/HobbiesPage';
 import Achievement from './pages/Achievement';
+import Hobby from './pages/Hobby';
 
 class App extends React.Component {
   constructor(props){
@@ -32,13 +33,13 @@ class App extends React.Component {
         title: 'About me',
       },
       portfolioMainPage: {
-        title: 'My projects!',
+        title: 'My Projects!',
       },
       achievements:{
-        title: 'My achievements!',
+        title: 'My Achievements!',
       },
       hobbies:{
-        title: 'My interests!',
+        title: 'My Interests!',
       },
       contact: {
         title: 'Get in touch with me',
@@ -80,6 +81,7 @@ class App extends React.Component {
                   <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
                   <Route path={process.env.PUBLIC_URL + '/PortfolioPage'} render={()=> <Portfolio />}/>
                   <Route path={process.env.PUBLIC_URL + '/Achievement'} render={() => <Achievement/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/Hobby'} render={() => <Hobby/>}/>
 
                   <Footer />
 
