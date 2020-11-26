@@ -1,9 +1,9 @@
 import React, { useState} from 'react';
-import { useSpring, animated as a } from 'react-spring';
 import Hero from '../components/Hero';
-import { Container, Row, Spinner } from 'react-bootstrap';
 import GridLayout from '../components/GridLayout';
 import LoadContent from '../components/LoadContent';
+import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Hobbies from '../assests/data/Hobbies.json';
 
@@ -19,18 +19,18 @@ function HobbiesPage(props){
                     if (loading) return (
                         <div>
                             <Hero title={props.title} />
-                            <Container fluid={true}>
-                                <Row className="justify-content-center">
-                                    <Spinner classname="justify-content-center" animation="border"/>
-                                </Row>
-                            </Container>
+                            <Grid container>
+                                <Grid item container className="justify-content-center">
+                                    <CircularProgress className="justify-content-center" animation="border"/>
+                                </Grid>
+                            </Grid>
                         </div>
                     );
                     if (error) return <span>Error loading</span>
                     return(
                         <div>
                             <Hero title={props.title} />
-                            <GridLayout page="Hobby" cards={data}/>
+                            <GridLayout page="hobby" cards={data}/>
                         </div>
                     );
                 }   

@@ -1,12 +1,15 @@
 import React, { useState, useLayoutEffect } from 'react';
+import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
-import {Container, Row, Spinner} from 'react-bootstrap';
 import LoadContent from '../components/LoadContent.js';
+
 // import Config from '../config.js';
 
 function HomePage(props){
+    
     return(
         <div>
             <LoadContent urls={[
@@ -18,11 +21,11 @@ function HomePage(props){
                 if (loading) return (
                     <div>
                         <Hero title={props.title} subTitle={props.subTitle} text={props.text}/>
-                        <Container fluid={true}>
-                            <Row className="justify-content-center">
-                                <Spinner classname="justify-content-center" animation="border"/>
-                            </Row>
-                        </Container>
+                            <Grid container>
+                                <Grid item container className="justify-content-center">
+                                    <CircularProgress className="justify-content-center" animation="border"/>
+                                </Grid>
+                            </Grid>
                     </div>
                 );
                 if (error) return <span>Error loading</span>

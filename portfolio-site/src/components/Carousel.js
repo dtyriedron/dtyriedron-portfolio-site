@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row} from 'react-bootstrap';
+// import { Container, Row} from 'react-bootstrap';
+import Grid from '@material-ui/core/Grid';
 
 import Card from '../components/Card';
 
@@ -10,11 +11,9 @@ import linkedIn from '../assests/images/linkedIn.jpeg';
 
 class Carousel extends React.Component{
     constructor(props){
-        console.log(props.insta);
     super(props);
         this.state={
             items:[
-                
                 {
                     id:0,
                     title: 'Instagram',
@@ -68,6 +67,8 @@ class Carousel extends React.Component{
         });
     }
 
+    
+
     makeitems = (items) => {
         return items.map(item => {
             return <Card item={item} click={(e => this.handleCardClick(item.id, e))} key={item.id} />
@@ -76,11 +77,13 @@ class Carousel extends React.Component{
 
     render(){
         return(
-            <Container fluid={true} >
-                <Row className="justify-content-center">
-                    {this.makeitems(this.state.items)}
-                </Row>
-            </Container>
+            <Grid container>
+                <Grid item xs={12} style={{marginLeft:"25%"}}>
+                    <div>
+                        {this.makeitems(this.state.items)}
+                    </div>
+                </Grid>
+            </Grid>
         );
     }
 }

@@ -1,15 +1,15 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
 import { Navbar, Nav } from 'react-bootstrap';
+import Grid from '@material-ui/core/Grid';
 import './App.css';
 
 import Footer from './components/Footer';
 import Home from './pages/HomePage';
 import About from './pages/AboutPage';
-import Contact from './pages/ContactPage';
-import PortfolioMain from './pages/PortfolioMainPage';
-import Portfolio from './pages/PortfolioPage';
+// import Contact from './pages/ContactPage';
+import Portfolio from './pages/PortfolioMainPage';
+import Project from './pages/PortfolioPage';
 import Achievements from './pages/AchievementsPage';
 import Hobbies from './pages/HobbiesPage';
 import Achievement from './pages/Achievement';
@@ -44,15 +44,13 @@ class App extends React.Component {
       contact: {
         title: 'Get in touch with me',
       },
-      
-      
     }
   }
   
   render(){
     return (
               <BrowserRouter >
-                <Container className="p-0" fluid={true}>
+                <Grid className="p-0" >
 
                   <Navbar className="border-bottom" bg="transparent" expand="lg">
                     <Navbar.Brand>Dylan Tyrie-Dron</Navbar.Brand>
@@ -62,10 +60,10 @@ class App extends React.Component {
                       <Nav className="ml-auto">
                         <Link className="nav-link" to={process.env.PUBLIC_URL + '/'}>Home</Link>
                         <Link className="nav-link" to={process.env.PUBLIC_URL + '/about'}>About</Link>
-                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/PortfolioMainPage'}>Portfolio</Link>
+                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/portfolio'}>Portfolio</Link>
                         <Link className="nav-link" to={process.env.PUBLIC_URL + '/achievements'}>Achievements</Link>
                         <Link className="nav-link" to={process.env.PUBLIC_URL + '/hobbies'}>Hobbies</Link>
-                        <Link className="nav-link" to={process.env.PUBLIC_URL + '/contact'}>Contact</Link>
+                        {/* <Link className="nav-link" to={process.env.PUBLIC_URL + '/contact'}>Contact</Link> */}
 
                       </Nav>
                     </Navbar.Collapse>
@@ -75,17 +73,17 @@ class App extends React.Component {
 
                   <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />}/>
                   <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title={this.state.about.title}/>}/>
-                  <Route path={process.env.PUBLIC_URL + '/PortfolioMainPage'} render={()=> <PortfolioMain title={this.state.portfolioMainPage.title}/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/portfolio'} render={()=> <Portfolio title={this.state.portfolioMainPage.title}/>}/>
                   <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title={this.state.achievements.title}/>}/>
                   <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title={this.state.hobbies.title}/>}/>
-                  <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
-                  <Route path={process.env.PUBLIC_URL + '/PortfolioPage'} render={()=> <Portfolio />}/>
-                  <Route path={process.env.PUBLIC_URL + '/Achievement'} render={() => <Achievement/>}/>
-                  <Route path={process.env.PUBLIC_URL + '/Hobby'} render={() => <Hobby/>}/>
+                  {/* <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/> */}
+                  <Route path={process.env.PUBLIC_URL + '/project'} render={()=> <Project />}/>
+                  <Route path={process.env.PUBLIC_URL + '/achievement'} render={() => <Achievement/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/hobby'} render={() => <Hobby/>}/>
 
                   <Footer />
 
-                </Container>
+                </Grid>
               </BrowserRouter>
             
 

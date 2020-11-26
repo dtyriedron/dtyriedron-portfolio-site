@@ -1,49 +1,50 @@
 import React from 'react';
-import { Row, Card, Button, Container} from 'react-bootstrap';
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+
+
+import Trail from '../components/Trail';
 
 function GridLayout(props){
-
     function handleClick(pos) {     
         const home = process.env.PUBLIC_URL + '';
         document.location = `${home}/${props.page}/?pos=${pos}`;
     }
 
     return(
-        <div>
-            <Container fluid={true} style={{padding: '1rem'}}>
-                <Row md={12} className="justify-content-center">  
-                {
-                    Object.entries(props.cards).map(([pos, card], i) => {
-                        return (         
-                            // <Col> 
-                            <Card border="primary" key={i} style={{width: '15rem', margin: '1rem'}}>
-                                <Card.Header key={i} style={{width: '100%'}}>{card.name}                                            
-                                </Card.Header>
-                                <Card.Body key={i}>
-                                    {
-                                        // Object.entries(language).map((lan, i) =>{
-                                        //     // console.log(language[lan])
-                                        //     return(
-                                        //         <Card.Img key={i} style={{width:'25%'}} variant="top" src={Android}/>
-                                        //     );
-                                        // })
-                                    }                                            
-                                    <Card.Text key={i}>
-                                        {card.description}
-                                    </Card.Text>                                            
-                                </Card.Body>
-                                <Card.Footer>
-                                <Button key={i} style={{width:'70%', marginRight:'5%'}} onClick={()=> handleClick(pos)} variant="primary">{props.page}
-                                    </Button>
-                                </Card.Footer>
-                            </Card>
-                        )
-                    })
-                }
+        
+        <Grid container className="justify-content-center" style={{padding: '1rem'}}>
 
-                </Row>
-            </Container>
-        </div>
+                {/* <Trail cards={Object.entries(props.cards)}> */}
+                    {
+                        Object.entries(props.cards).map(([pos, card], i) => {
+                            return (
+                                <Card style={{width: '16rem', margin: '1rem'}} key={i}>
+                                    <CardHeader 
+                                        title={card.name}
+                                    />
+                                    <CardContent>
+                                        <Typography variant="body2" color="textSecondary" component="p">
+                                            {card.description}
+                                        </Typography>
+                                    </CardContent>
+                                    <CardActions>
+                                        <Button size="small" color="primary" onClick={()=> handleClick(pos)} style={{bottom:'0'}}>
+                                            {props.page + " page"}
+                                        </Button>
+                                    </CardActions>
+                                </Card>
+                            )
+                        })
+                    }
+                {/* </Trail> */}
+
+        </Grid>
     );
 }
 

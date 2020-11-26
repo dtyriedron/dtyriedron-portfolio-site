@@ -1,15 +1,13 @@
 import React from 'react';
-import { Container, Row, Col} from 'react-bootstrap';
+import Grid from '@material-ui/core/Grid';
 
 function Content(props){
     return(
-        <Container fluid={true}>
-            <Row className="justify-content-center">
-                <Col md={8}>
-                    {props.children}
-                </Col>
-            </Row>
-        </Container>
+        <Grid container>
+            <Grid item xs={12} style={{marginLeft:"15%"}}>
+                {props.children} 
+            </Grid>
+        </Grid>
     );
 }
 

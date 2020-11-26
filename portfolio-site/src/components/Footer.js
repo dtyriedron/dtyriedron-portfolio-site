@@ -1,19 +1,21 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import Grid from '@material-ui/core/Grid';
 
 function Footer(){
     return(    
         <footer className="mt-5">
-            <Container fluid={true}>
-                <Row className="border-top justify-content-between p-3">
-                    <Col className="p-0" md={3} sm={12}>
-                        Dylan Tyrie-Dron
-                    </Col>
-                    <Col className="p-0 d-flex justify-content-end" md={2.5}>
+            <Grid container >
+                    <Grid item xs={9} > 
+                        <div style={{marginLeft:"1rem"}}>
+                            Dylan Tyrie-Dron
+                        </div>
+                    </Grid>
+                    <Grid className="p-0 d-flex justify-content-end" item xs={3}>
+                        <div style={{marginRight:"1rem"}}>
                         This site was made by Dylan Tyrie-Dron.
-                    </Col>
-                </Row>
-            </Container>
+                        </div>
+                    </Grid>
+                </Grid>
         </footer>
     );
 }

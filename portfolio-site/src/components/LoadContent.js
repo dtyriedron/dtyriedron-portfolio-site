@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Spinner } from 'react-bootstrap';
+import React from 'react';
 
 class LoadContent extends React.Component{
     state = {
