@@ -19,17 +19,16 @@ function GridLayout(props){
     return(
         
         <Grid container className="justify-content-center" style={{padding: '1rem'}}>
-
                 {/* <Trail cards={Object.entries(props.cards)}> */}
                     {
                         Object.entries(props.cards).map(([pos, card], i) => {
                             return (
                                 <Card style={{width: '16rem', margin: '1rem'}} key={i}>
-                                    <CardHeader 
-                                        title={card.name}
+                                    <CardHeader
+                                        title={<Typography variant="h6" color="primary">{card.name}</Typography>}
                                     />
                                     <CardContent>
-                                        <Typography variant="body2" color="textSecondary" component="p">
+                                        <Typography variant="body2" color="secondary" component="p">
                                             {card.description}
                                         </Typography>
                                     </CardContent>

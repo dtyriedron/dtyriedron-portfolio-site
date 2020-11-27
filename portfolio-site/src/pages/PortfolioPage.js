@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
 import LinearProgressWithLabel from '../components/LinearProgressWithLabel';
 
@@ -51,24 +53,27 @@ function PortfolioPage(){
     var percent=0;
 
     return(
+        
         <div>
             <Hero title={name}/>
             <Grid container style={{paddingLeft:"25%"}}>
                 <Grid container item>
                     <Grid item xs={7}>
                         <p>
-                            {description} 
+                            {<Typography variant="subtitle1" color="secondary">{description}</Typography>} 
                         </p>
                     </Grid>
                     <Grid item xs={1}>
-                        <Button href= {`https://github.com/dtyriedron/${name}`} target="_blank" style={{right:0, bottom:0, width:"100%"}} variant="contained">Github</Button>{' '}
+                        <Button href= {`https://github.com/dtyriedron/${name}`} color="secondary" target="_blank" style={{right:0, bottom:0, width:"100%"}} variant="contained">
+                            {<Typography variant="button" color="primary">Github</Typography>}
+                        </Button>{' '}
                     </Grid>
                 </Grid>
                 <Grid item xs={8}>
-                    <div style={{border: ".2rem solid #ececec", padding: "1rem"}}>
+                    <Box border={1} padding="1rem" borderColor="primary.main" borderRadius={16}>
                         <p>
-                            Code coverage:
-                        </p> 
+                            {<Typography variant="subTitle1" color="secondary"> Code coverage: </Typography> }
+                        </p>
                         {
                             
                             Object.entries(language).map(([lan, bytes], i) => {
@@ -79,7 +84,7 @@ function PortfolioPage(){
                                     )
                             })
                         }
-                    </div>
+                    </Box>
 
                 </Grid>
             </Grid>

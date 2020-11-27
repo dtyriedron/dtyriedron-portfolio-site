@@ -1,6 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import { useTheme } from "@material-ui/core/styles";
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
@@ -9,7 +10,7 @@ import LoadContent from '../components/LoadContent.js';
 // import Config from '../config.js';
 
 function HomePage(props){
-    
+    const theme = useTheme();
     return(
         <div>
             <LoadContent urls={[

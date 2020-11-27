@@ -8,6 +8,7 @@ import Card from '../components/Card';
 import github from '../assests/images/DylanGH.png';
 import strava from '../assests/images/DylanStrava.png';
 import linkedIn from '../assests/images/linkedIn.jpeg';
+import insta from '../assests/images/insta.jpg';
 
 class Carousel extends React.Component{
     constructor(props){
@@ -18,7 +19,8 @@ class Carousel extends React.Component{
                     id:0,
                     title: 'Instagram',
                     subTitle: 'Photo and video sharing',
-                    imgSrc: props.insta["graphql"]["user"]["profile_pic_url_hd"],
+                    // imgSrc: props.insta["graphql"]["user"]["profile_pic_url_hd"],
+                    imgSrc: insta,
                     link: 'https://www.instagram.com/doseofdylz/',
                     selected: false
                 },
@@ -78,7 +80,7 @@ class Carousel extends React.Component{
     render(){
         return(
             <Grid container>
-                <Grid item xs={12} style={{marginLeft:"25%"}}>
+                <Grid item xs={12} style={{marginLeft:"10%"}}>
                     <div>
                         {this.makeitems(this.state.items)}
                     </div>

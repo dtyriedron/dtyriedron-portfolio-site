@@ -1,18 +1,19 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
+import Typography from "@material-ui/core/Typography";
 
 
 function Hero(props){
     return(
         <Grid container>
             <Grid item container className="justify-content-center">
-                { props.title && <h3 className="display-4 font-weight-bolder">{props.title}</h3> }
+                { props.title && <Typography variant="h1" color="primary">{props.title}</Typography> }
             </Grid>
             <Grid item container className="justify-content-center">
-                { props.subTitle && <h4 className="display-6 font-weight-light">{props.subTitle}</h4> }
+                { props.subTitle && <Typography color="secondary" variant="h4">{props.subTitle}</Typography> }
             </Grid>
             <Grid item container className="justify-content-center">
-                { props.text && <h5 className="lead font-weight-light">{props.text}</h5> }
+                { props.text && <Typography color="secondary" variant="h5">{props.text}</Typography> }
             </Grid>
         </Grid>
     );
