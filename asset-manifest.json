@@ -1,29 +1,30 @@
 {
   "files": {
     "main.css": "/portfolio-site/static/css/main.d1a43055.chunk.css",
-    "main.js": "/portfolio-site/static/js/main.d46f86ca.chunk.js",
-    "main.js.map": "/portfolio-site/static/js/main.d46f86ca.chunk.js.map",
+    "main.js": "/portfolio-site/static/js/main.06860c59.chunk.js",
+    "main.js.map": "/portfolio-site/static/js/main.06860c59.chunk.js.map",
     "runtime-main.js": "/portfolio-site/static/js/runtime-main.2d95e7a6.js",
     "runtime-main.js.map": "/portfolio-site/static/js/runtime-main.2d95e7a6.js.map",
     "static/css/2.8aa5a7f8.chunk.css": "/portfolio-site/static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.c8657add.chunk.js": "/portfolio-site/static/js/2.c8657add.chunk.js",
-    "static/js/2.c8657add.chunk.js.map": "/portfolio-site/static/js/2.c8657add.chunk.js.map",
+    "static/js/2.0aaa551c.chunk.js": "/portfolio-site/static/js/2.0aaa551c.chunk.js",
+    "static/js/2.0aaa551c.chunk.js.map": "/portfolio-site/static/js/2.0aaa551c.chunk.js.map",
     "index.html": "/portfolio-site/index.html",
-    "precache-manifest.501e5c91eb7caad93fe9df10ddad78cb.js": "/portfolio-site/precache-manifest.501e5c91eb7caad93fe9df10ddad78cb.js",
+    "precache-manifest.44fd503fcf109fbf823d6ead3ff2ae6c.js": "/portfolio-site/precache-manifest.44fd503fcf109fbf823d6ead3ff2ae6c.js",
     "service-worker.js": "/portfolio-site/service-worker.js",
     "static/css/2.8aa5a7f8.chunk.css.map": "/portfolio-site/static/css/2.8aa5a7f8.chunk.css.map",
     "static/css/main.d1a43055.chunk.css.map": "/portfolio-site/static/css/main.d1a43055.chunk.css.map",
-    "static/js/2.c8657add.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.c8657add.chunk.js.LICENSE.txt",
+    "static/js/2.0aaa551c.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.0aaa551c.chunk.js.LICENSE.txt",
     "static/media/DylanGH.png": "/portfolio-site/static/media/DylanGH.8f6ed301.png",
     "static/media/DylanStrava.png": "/portfolio-site/static/media/DylanStrava.0ec24b30.png",
     "static/media/android.svg": "/portfolio-site/static/media/android.54170236.svg",
+    "static/media/insta.jpg": "/portfolio-site/static/media/insta.eeca66dc.jpg",
     "static/media/linkedIn.jpeg": "/portfolio-site/static/media/linkedIn.19cc82b0.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.2d95e7a6.js",
     "static/css/2.8aa5a7f8.chunk.css",
-    "static/js/2.c8657add.chunk.js",
+    "static/js/2.0aaa551c.chunk.js",
     "static/css/main.d1a43055.chunk.css",
-    "static/js/main.d46f86ca.chunk.js"
+    "static/js/main.06860c59.chunk.js"
   ]
 }
