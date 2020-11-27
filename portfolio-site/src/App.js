@@ -159,48 +159,43 @@ function App(){
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
+  const listItemClick = (link) => {
+    const home = process.env.PUBLIC_URL + '/';
+    window.location = `${home}${link}`;
+  };
+
   const mainListItems = (
     <div>
-      <Link className="nav-link" to={process.env.PUBLIC_URL + '/'}>
-        <ListItem button>
-          <ListItemIcon>
-            <HomeIcon />
-          </ListItemIcon>
-          <ListItemText primary="Home"/>
-        </ListItem>
-      </Link>
-      <Link className="nav-link" to={process.env.PUBLIC_URL + '/about'}>
-        <ListItem button>
-          <ListItemIcon>
-            <AboutIcon />
-          </ListItemIcon>
-          <ListItemText primary="About" />
-        </ListItem>
-      </Link>
-      <Link className="nav-link" to={process.env.PUBLIC_URL + '/portfolio'}>
-        <ListItem button>
-          <ListItemIcon>
-            <WorkIcon />
-          </ListItemIcon>
-          <ListItemText primary="Portfolio" />
-        </ListItem>
-      </Link>
-      <Link className="nav-link" to={process.env.PUBLIC_URL + '/achievements'}>
-        <ListItem button>
-          <ListItemIcon>
-            <StarIcon />
-          </ListItemIcon>
-          <ListItemText primary="Achievements" />
-        </ListItem>
-      </Link>
-      <Link className="nav-link" to={process.env.PUBLIC_URL + '/hobbies'}>
-        <ListItem button>
-          <ListItemIcon>
-            <Favoriteicon />
-          </ListItemIcon>
-          <ListItemText primary="Hobbies" />
-        </ListItem>
-      </Link>
+      <ListItem button onClick={() => listItemClick('')}>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="Home"/>
+      </ListItem>
+      <ListItem button onClick={() => listItemClick('about')}>
+        <ListItemIcon>
+          <AboutIcon />
+        </ListItemIcon>
+        <ListItemText primary="About" />
+      </ListItem>
+      <ListItem button onClick={() => listItemClick('portfolio')}>
+        <ListItemIcon>
+          <WorkIcon />
+        </ListItemIcon>
+        <ListItemText primary="Portfolio" />
+      </ListItem>
+      <ListItem button onClick={() => listItemClick('achievements')}>
+        <ListItemIcon>
+          <StarIcon />
+        </ListItemIcon>
+        <ListItemText primary="Achievements" />
+      </ListItem>
+      <ListItem button onClick={() => listItemClick('hobbies')}>
+        <ListItemIcon>
+          <Favoriteicon />
+        </ListItemIcon>
+        <ListItemText primary="Hobbies" />
+      </ListItem>
     </div>
   );
   
