@@ -7,7 +7,7 @@ function Hero(props){
     return(
         <Grid container>
             <Grid item container className="justify-content-center">
-                { props.title && <Typography variant="h1" color="primary">{props.title}</Typography> }
+                { props.title && <Typography variant="h3" color="primary">{props.title}</Typography> }
             </Grid>
             <Grid item container className="justify-content-center">
                 { props.subTitle && <Typography color="secondary" variant="h4">{props.subTitle}</Typography> }

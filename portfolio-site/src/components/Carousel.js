@@ -5,8 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Card from '../components/Card';
 
 
-import github from '../assests/images/DylanGH.png';
-import strava from '../assests/images/DylanStrava.png';
+import github from '../assests/images/Github.png';
+import strava from '../assests/images/Strava.jpeg';
 import linkedIn from '../assests/images/linkedIn.jpeg';
 import insta from '../assests/images/insta.jpg';
 
@@ -80,7 +80,7 @@ class Carousel extends React.Component{
     render(){
         return(
             <Grid container>
-                <Grid item xs={12} style={{marginLeft:"10%"}}>
+                <Grid item xs={12} >
                     <div>
                         {this.makeitems(this.state.items)}
                     </div>
