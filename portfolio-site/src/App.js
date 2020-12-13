@@ -18,6 +18,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import { useTheme } from "@material-ui/core/styles";
 
 import AboutIcon from "@material-ui/icons/Info";
 import WorkIcon from "@material-ui/icons/Work";
@@ -144,6 +145,7 @@ function App(){
       }
     }
   });
+  const theme = useTheme();
 
   const handleThemeChange = () => {
     setDarkState(!darkState);
@@ -159,48 +161,53 @@ function App(){
 
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
-  const listItemClick = (link) => {
-    const home = process.env.PUBLIC_URL + '/';
-    window.location = `${home}${link}`;
-  };
-
   const mainListItems = (
     <div>
-      <ListItem button onClick={() => listItemClick('')}>
-        <ListItemIcon>
-          <HomeIcon />
-        </ListItemIcon>
-        <ListItemText primary="Home"/>
-      </ListItem>
-      <ListItem button onClick={() => listItemClick('about')}>
-        <ListItemIcon>
-          <AboutIcon />
-        </ListItemIcon>
-        <ListItemText primary="About" />
-      </ListItem>
-      <ListItem button onClick={() => listItemClick('portfolio')}>
-        <ListItemIcon>
-          <WorkIcon />
-        </ListItemIcon>
-        <ListItemText primary="Portfolio" />
-      </ListItem>
-      <ListItem button onClick={() => listItemClick('achievements')}>
-        <ListItemIcon>
-          <StarIcon />
-        </ListItemIcon>
-        <ListItemText primary="Achievements" />
-      </ListItem>
-      <ListItem button onClick={() => listItemClick('hobbies')}>
-        <ListItemIcon>
-          <Favoriteicon />
-        </ListItemIcon>
-        <ListItemText primary="Hobbies" />
-      </ListItem>
+      <Link to={process.env.PUBLIC_URL + '/'} style={{ color: `${mainSecondaryColor}`, textDecoration: 'none' }} >
+        <ListItem button >
+          <ListItemIcon>
+            <HomeIcon color="primary" />
+          </ListItemIcon>
+          <ListItemText primary="Home"/>
+        </ListItem>
+      </Link>
+      <Link to={process.env.PUBLIC_URL + '/about'} style={{  color: `${mainSecondaryColor}`,textDecoration: 'none' }}>
+        <ListItem button >
+          <ListItemIcon>
+            <AboutIcon color="primary"/>
+          </ListItemIcon>
+          <ListItemText primary="About"/>
+        </ListItem>
+      </Link>
+      <Link to={process.env.PUBLIC_URL + '/portfolio'} style={{  color: `${mainSecondaryColor}`,textDecoration: 'none' }}>
+        <ListItem button >
+          <ListItemIcon>
+            <WorkIcon color="primary"/>
+          </ListItemIcon>
+          <ListItemText primary="Portfolio"/>
+        </ListItem>
+      </Link>
+      <Link to={process.env.PUBLIC_URL + '/achievements'} style={{  color: `${mainSecondaryColor}`,textDecoration: 'none' }}>
+        <ListItem button >
+          <ListItemIcon>
+            <StarIcon color="primary"/>
+          </ListItemIcon>
+          <ListItemText primary="Achievements"/>
+        </ListItem>
+      </Link>
+      <Link to={process.env.PUBLIC_URL + '/hobbies'} style={{  color: `${mainSecondaryColor}`,textDecoration: 'none' }}>
+        <ListItem button >
+          <ListItemIcon>
+            <Favoriteicon color="primary"/>
+          </ListItemIcon>
+          <ListItemText primary="Hobbies"/>
+        </ListItem>
+      </Link>
     </div>
   );
   
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme= {darkTheme} >
       <div className={classes.root}>
       <CssBaseline />
         <BrowserRouter >
@@ -240,23 +247,23 @@ function App(){
             <List>{mainListItems}</List>
             
           </Drawer>
-          <main className={classes.content}>
-            <div className={classes.appBarSpacer} />
-            <Container maxWidth="lg" className={classes.container}>
-              <Grid>
-                <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title="Dylan Tyrie-Dron" subTitle='Graduate Software Engineer' color="inherit"/>}/>
-                <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title='About me' />}/>
-                <Route path={process.env.PUBLIC_URL + '/portfolio'} render={()=> <Portfolio title='My Projects!' />}/>
-                <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title='My Achievements!'/>}/>
-                <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title='My Interests!' />}/>
-                {/* <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/> */}
-                <Route path={process.env.PUBLIC_URL + '/project'} render={()=> <Project />}/>
-                <Route path={process.env.PUBLIC_URL + '/achievement'} render={() => <Achievement/>}/>
-                <Route path={process.env.PUBLIC_URL + '/hobby'} render={() => <Hobby/>}/>
-              </Grid>              
-          </Container>
-          <Footer color="inherit"/>
-        </main>
+            <main className={classes.content}>
+              <div className={classes.appBarSpacer} />
+              <Container maxWidth="lg" className={classes.container}>
+                <Grid>
+                  <Route exact path={process.env.PUBLIC_URL + '/'} render={()=> <Home title="Dylan Tyrie-Dron" subTitle='Graduate Software Engineer' color="inherit"/>} />
+                  <Route path={process.env.PUBLIC_URL + '/about'} render={()=> <About title='About me'/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/portfolio'} render={()=> <Portfolio title='My Projects!' />}/>
+                  <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title='My Achievements!'/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title='My Interests!' />}/>
+                  {/* <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/> */}
+                  <Route path={process.env.PUBLIC_URL + '/project'} render={()=> <Project />}/>
+                  <Route path={process.env.PUBLIC_URL + '/achievement'} render={() => <Achievement/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/hobby'} render={() => <Hobby/>}/>
+                </Grid>              
+            </Container>
+            <Footer color="inherit"/>
+          </main>
       </BrowserRouter>
       </div>
     </ThemeProvider >

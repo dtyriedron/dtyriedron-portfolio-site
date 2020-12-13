@@ -1,4 +1,4 @@
-import react from 'react';
+// import react from 'react';
 
 import github from '../images/Github.png';
 import strava from '../images/Strava.jpeg';
