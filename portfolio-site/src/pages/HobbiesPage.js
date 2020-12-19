@@ -4,12 +4,17 @@ import GridLayout from '../components/GridLayout';
 import LoadContent from '../components/LoadContent';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {Helmet} from 'react-helmet';
 
 import Hobbies from '../assests/data/Hobbies.json';
 
 function HobbiesPage(props){
     return(
         <div>
+            <Helmet>
+                <title>Dylan Tyrie-Dron: My hobbies!</title>
+                <meta name="description" content="A grid of interactive hobby cards that direct to more information on my main intersts outside of work."></meta>
+            </Helmet>
                 <LoadContent urls={[
                 Hobbies,
             ]}>

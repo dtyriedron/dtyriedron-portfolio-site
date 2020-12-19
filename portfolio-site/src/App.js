@@ -19,6 +19,7 @@ import ListSubheader from "@material-ui/core/ListSubheader";
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import { useTheme } from "@material-ui/core/styles";
+import {Helmet} from 'react-helmet';
 
 import AboutIcon from "@material-ui/icons/Info";
 import WorkIcon from "@material-ui/icons/Work";
@@ -209,6 +210,10 @@ function App(){
   return (
     <ThemeProvider theme= {darkTheme} >
       <div className={classes.root}>
+        <Helmet>
+          <title>Dylan Tyrie-Dron: My website!</title>
+          <meta name="description" content="A simple React website showcasing where to connect with me, my experiences, achievements and hobbies."></meta>
+        </Helmet>
       <CssBaseline />
         <BrowserRouter >
           <AppBar position="absolute"
@@ -256,10 +261,10 @@ function App(){
                   <Route path={process.env.PUBLIC_URL + '/portfolio'} render={()=> <Portfolio title='My Projects!' />}/>
                   <Route path={process.env.PUBLIC_URL + '/achievements'} render={()=> <Achievements title='My Achievements!'/>}/>
                   <Route path={process.env.PUBLIC_URL + '/hobbies'} render={()=> <Hobbies title='My Interests!' />}/>
-                  {/* <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/> */}
-                  <Route path={process.env.PUBLIC_URL + '/project'} render={()=> <Project />}/>
+                  {/* <Route path={process.env.PUBLIC_URL + '/contact'} render={()=> <Contact title={this.state.contact.title}/>}/>
+                  {/* <Route path={process.env.PUBLIC_URL + '/project'} render={()=> <Project />}/>
                   <Route path={process.env.PUBLIC_URL + '/achievement'} render={() => <Achievement/>}/>
-                  <Route path={process.env.PUBLIC_URL + '/hobby'} render={() => <Hobby/>}/>
+                  <Route path={process.env.PUBLIC_URL + '/hobby'} render={() => <Hobby/>}/> */}
                 </Grid>              
             </Container>
             <Footer color="inherit"/>

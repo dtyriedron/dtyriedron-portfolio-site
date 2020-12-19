@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import {Helmet} from 'react-helmet';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
@@ -67,6 +68,10 @@ class ContactPage extends React.Component{
     render(){
         return(
             <div>
+                <Helmet>
+                    <title>Dylan Tyrie-Dron: Get in touch with me!</title>
+                    <meta name="description" content="If you'd like to send me an email, use this page to get in touch."></meta>
+                </Helmet>
                 <Hero title={this.props.title} />
 
                 <Content>

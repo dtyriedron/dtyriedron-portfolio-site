@@ -4,13 +4,19 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Hero from '../components/Hero';
 import GridLayout from '../components/GridLayout';
 import LoadContent from '../components/LoadContent';
+import {Helmet} from 'react-helmet';
 
 import Android from '../assests/images/android.svg';
 
 function PortfolioMainPage(props){
     return(
         <div>
-          <LoadContent urls={[
+            <Helmet>
+                <title>Dylan Tyrie-Dron: My portfolio!</title>
+                <meta name="description" content="A grid of interactive project cards that direct to more information on my public projects that are GitHub."></meta>
+            </Helmet>
+
+            <LoadContent urls={[
                 "https://api.github.com/users/dtyriedron/repos",
             ]}>
             {

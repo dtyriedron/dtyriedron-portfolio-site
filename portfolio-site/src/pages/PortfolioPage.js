@@ -4,12 +4,14 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import {Helmet} from 'react-helmet';
 
 import LinearProgressWithLabel from '../components/LinearProgressWithLabel';
 
-function PortfolioPage(){
-    var url = new URL(window.location.href);
-    var param = url.searchParams.get("pos");
+function PortfolioPage(props){
+    // var url = new URL(window.location.href);
+    // var param = url.searchParams.get("pos");
+    var param = props.pos;
 
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
@@ -55,6 +57,10 @@ function PortfolioPage(){
     return(
         
         <div>
+            <Helmet>
+                <title>Dylan Tyrie-Dron: Project- {name}</title>
+                <meta name="description" content={description}></meta>
+            </Helmet>
             <Hero title={name}/>
             <Grid container style={{paddingLeft:"25%"}}>
                 <Grid container item>

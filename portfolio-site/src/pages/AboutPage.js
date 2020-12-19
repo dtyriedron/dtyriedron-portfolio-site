@@ -1,14 +1,19 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { useTheme, withTheme } from "@material-ui/core/styles";
+import {Helmet} from 'react-helmet';
+
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 
 function AboutPage(props){
-    const theme = useTheme();
     return(
         <div>
+            <Helmet>
+                <title>Dylan Tyrie-Dron: About me!</title>
+                <meta name="description" content="A simple description of who I am and my core experience as a developer."></meta>
+            </Helmet>
+
             <Hero title={props.title}/>
 
             <Content>

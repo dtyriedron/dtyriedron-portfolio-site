@@ -4,6 +4,7 @@ import GridLayout from '../components/GridLayout';
 import LoadContent from '../components/LoadContent';
 import Grid from '@material-ui/core/Grid';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import {Helmet} from 'react-helmet';
 
 import Achievements from '../assests/data/Achievements.json';
 
@@ -11,12 +12,15 @@ import Achievements from '../assests/data/Achievements.json';
 function AchievementsPage(props){
     return(
         <div>
-                <LoadContent urls={[
+            <Helmet>
+                <title>Dylan Tyrie-Dron: My Achievements!</title>
+                <meta name="description" content="A grid of interactive achievement cards that direct to more information on my top achievements."></meta>
+            </Helmet>
+            <LoadContent urls={[
                 Achievements,
             ]}>
             {
                 ({ loading, error, data }) => {
-
                     if (loading) return (
                         <div>
                             <Hero title={props.title} />

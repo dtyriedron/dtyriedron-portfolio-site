@@ -9,7 +9,7 @@ import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import tileData from '../assests/data/tileData';
 import InfoIcon from '@material-ui/icons/Info';
-import ListSubheader from '@material-ui/core/ListSubheader';
+import {Helmet} from 'react-helmet';
 
 import Hero from '../components/Hero';
 import Carousel from '../components/Carousel';
@@ -50,6 +50,11 @@ function HomePage(props){
 
     return(
         <div>
+            <Helmet>
+                <title>Dylan Tyrie-Dron: My home page!</title>
+                <meta name="description" content="A carosel of interactive cards that will direct to social channels used to connect with me!"></meta>
+            </Helmet>
+
             <LoadContent urls={[
                 "https://www.instagram.com/doseofdylz/?__a=1",
             ]}>
